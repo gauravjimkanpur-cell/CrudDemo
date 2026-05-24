@@ -1,0 +1,16 @@
+@model CrudDemo.Models.Product
+@{
+    ViewData["Title"] = "Product Details";
+}
+
+<h1>@Model.Name</h1>
+
+<div class="mb-3">
+    <strong>Price:</strong> @Model.Price.ToString("C")
+</div>
+<div class="mb-3">
+    <strong>Description:</strong>
+    <div>@Model.Description</div>
+ </div>
+
+<a class="btn btn-secondary" href="/">Back</a>

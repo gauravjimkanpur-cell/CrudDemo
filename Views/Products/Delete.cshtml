@@ -1,0 +1,17 @@
+@model CrudDemo.Models.Product
+@{
+    ViewData["Title"] = "Delete Product";
+}
+
+<h1>Delete Product</h1>
+
+<div class="mb-3">
+    <h3>@Model.Name</h3>
+    <p>@Model.Description</p>
+    <p><strong>Price:</strong> @Model.Price.ToString("C")</p>
+    <form asp-action="Delete" method="post">
+        <input type="hidden" asp-for="Id" />
+        <button class="btn btn-danger" type="submit">Delete</button>
+        <a class="btn btn-secondary" href="/">Cancel</a>
+    </form>
+</div>
